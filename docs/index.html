@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Analysis Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #000000;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #000000;
+            padding: 10px 0;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+        }
+
+        .navbar ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .navbar ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: rgb(255, 119, 7);
+            font-size: 18px;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .navbar ul li a:hover {
+            background-color: #fa6400;
+        }
+
+        header {
+            background-color: #000000;
+            color: rgb(255, 119, 7);
+            padding: 40px;
+            font-size: 24px;
+            margin-top: 50px;
+        }
+
+        .container {
+            width: 90%;
+            margin: auto;
+            padding: 20px;
+        }
+
+        h2 {
+            background-color: #000000;
+            color: rgb(255, 255, 255);
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 80px;
+        }
+
+        iframe {
+            width: 100%;
+            height: 500px;
+            border: 2px solid #000000;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+        }
+
+        footer {
+            background-color: #0e0d0d;
+            color: white;
+            padding: 10px;
+            font-size: 14px;
+            margin-top: 20px;
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        @media (max-width: 768px) {
+            iframe {
+                height: 400px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <ul>
+            <li><a href="#age-distribution">Age Distribution</a></li>
+            <li><a href="#age-group-map">Age Group Map</a></li>
+            <li><a href="#heatmap">Heatmap</a></li>
+            <li><a href="#fuel-distribution">Fuel Distribution</a></li>
+        </ul>
+    </div>
+
+    <header>Vehicle Analysis Dashboard</header>
+
+    <div class="container">
+        <h2 id="age-distribution">Vehicle Age Distribution</h2>
+        <iframe src="vehicle_age_distribution.html"></iframe>
+
+        <h2 id="age-group-map">Optimized Vehicle Age Group Map</h2>
+        <iframe src="optimized_vehicle_age_group_map.html"></iframe>
+
+        <h2 id="heatmap">Time Series Weighted Heatmap</h2>
+        <iframe src="time_series_weighted_heatmap.html"></iframe>
+
+        <h2 id="fuel-distribution">Vehicle Fuel Distribution</h2>
+        <iframe src="vehicle_fuel_distribution_with_dropdown.html"></iframe>
+    </div>
+
+    <footer>
+        © 2025 Vehicle Analysis | Powered by GitHub Pages
+    </footer>
+
+</body>
+</html>
